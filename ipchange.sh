@@ -9,17 +9,7 @@ echo -e "\e[31m└────────────────────�
 echo ""
 
 # -------------------------------
-# 1️⃣ Update and Install Packages
-# -------------------------------
-echo -e "\e[1;33m[+] Updating & Upgrading Termux Packages...\e[0m"
-apt update -y && apt upgrade -y
-
-echo -e "\e[1;33m[+] Installing tur-repo & Required Packages...\e[0m"
-apt install tur-repo -y
-apt install tor privoxy netcat-openbsd curl -y
-
-# -------------------------------
-# 2️⃣ Setup Environment
+# 1️⃣ Setup Environment
 # -------------------------------
 echo -e "\e[1;32m[+] Setting Up Tor and Privoxy Configuration...\e[0m"
 pkill tor
@@ -28,7 +18,7 @@ rm -rf ~/.tor_multi ~/.privoxy
 mkdir -p ~/.tor_multi ~/.privoxy
 
 # -------------------------------
-# 3️⃣ Start Tor and Privoxy Services
+#  2️⃣ Start Tor and Privoxy Services
 # -------------------------------
 echo -e "\e[1;34m[+] Launching Tor Nodes & Proxy Server...\e[0m"
 PORTS=(9050 9060 9070 9080 9090)
